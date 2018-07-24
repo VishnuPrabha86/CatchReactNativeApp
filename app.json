@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "CatchReactNativeApp",
+    "name": "CatchReactApp",
     "description": "This project is really great.",
-    "slug": "CatchReactNativeApp",
+    "slug": "CatchReactApp",
     "privacy": "public",
     "sdkVersion": "28.0.0",
     "platforms": ["ios", "android"],
