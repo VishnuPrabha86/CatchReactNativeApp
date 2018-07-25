@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import Image from 'react-native-scalable-image';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   ActivityIndicator,
@@ -9,20 +8,24 @@ import {
   Alert
 } from "react-native";
 import { Dimensions } from "react-native";
-export default class MyComponent extends Component {
+import Image from 'react-native-scalable-image';
+import {Icon} from 'native-base';
+
+
+export default class ClubCatch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isLoading: true
     };
   }
+
   GetItem(name) {
     Alert.alert(name);
   }
-
   componentDidMount() {
     return fetch(
-      "https://cotdapi.devcat.ch/startup/2/?appVersion=2.20.0&app_version=2.20.0&osName=React"
+      "https://cotdapi.devcat.ch/v1/shops.json?&osName=React&fields=events&ids=69"
     )
       .then(response => response.json())
       .then(responseJson => {
@@ -32,7 +35,8 @@ export default class MyComponent extends Component {
         this.setState(
           {
             isLoading: false,
-            dataSource: ds.cloneWithRows(responseJson.events)
+            //eventSource = (responseJson.shops),
+            dataSource: ds.cloneWithRows(responseJson.shops)
           },
           function() {
             // In this block you can do something with new state.
@@ -50,25 +54,30 @@ export default class MyComponent extends Component {
         style={{
           height: 0.5,
           width: "100%",
-          backgroundColor: "#000"
+          backgroundColor: "#999999"
         }}
       />
     );
   };
 
-  render() {
-    if (this.state.isLoading) {
-      return (
-        <View
-          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-        >
-          <ActivityIndicator size="large" color="purple" />
-        </View>
-      );
-    }
 
-    return (
-      <View style={styles.MainContainer}>
+
+  static navigationOptions = {
+    tabBarIcon: ({tintColor}) => (<Icon name="ios-search" style ={{color:tintColor}} />)
+    }
+    render() {
+      if (this.state.isLoading) {
+        return (
+          <View
+            style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+          >
+            <ActivityIndicator size="large" color="purple" />
+          </View>
+        );
+      }
+  
+      return (
+        <View style={styles.MainContainer}>
         <ListView
           dataSource={this.state.dataSource}
           renderSeparator={this.ListViewItemSeparator}
@@ -92,22 +101,20 @@ export default class MyComponent extends Component {
           )}
         />
       </View>
-    );
-  }
+      );
+    }
 }
 
 const styles = StyleSheet.create({
-  MainContainer: {
-    // Setting up View inside content in Vertically center.
-    justifyContent: "center",
+  container: {
     flex: 1,
-    margin: 0
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-
-  rowViewContainer: {
-    fontSize: 20,
-    paddingRight: 0,
-    paddingTop: 10,
-    paddingBottom: 10
+  bannerText: {
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    padding: 15,
   }
-});
+})

@@ -1,9 +1,10 @@
-import React from 'react';
-import { createMaterialTopTabNavigator,  } from 'react-navigation';
+import React from 'react'
+import { createMaterialTopTabNavigator,  } from 'react-navigation'
 import { View, Text } from 'react-native';
 import { Dimensions } from "react-native";
-import New from '../Categories/New'
+import ClubCatch from '../Categories/ClubCatch';
 import MyComponent from '../Screens/HomeScroll';
+
 
 class TopNavigationTabs extends React.Component {
 
@@ -20,18 +21,6 @@ class TopNavigationTabs extends React.Component {
 }
 
 
-
-
-class ClubCatch extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>Hello Club Catch</Text>
-            </View>
-        );
-
-    }
-}
 class MarketplaceDeals extends React.Component {
     render() {
         return (
