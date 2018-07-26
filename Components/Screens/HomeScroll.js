@@ -34,6 +34,7 @@ export default class MyComponent extends Component {
             isLoading: false,
             dataSource: ds.cloneWithRows(responseJson.events)
           },
+
           function() {
             // In this block you can do something with new state.
           }

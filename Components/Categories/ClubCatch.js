@@ -19,6 +19,7 @@ export default class ClubCatch extends React.Component {
       isLoading: true
     };
   }
+  
 
   GetItem(name) {
     Alert.alert(name);
@@ -27,26 +28,41 @@ export default class ClubCatch extends React.Component {
     return fetch(
       "https://cotdapi.devcat.ch/v1/shops.json?&osName=React&fields=events&ids=69"
     )
-      .then(response => response.json())
-      .then(responseJson => {
-        let ds = new ListView.DataSource({
-          rowHasChanged: (r1, r2) => r1 !== r2
-        });
-        this.setState(
-          {
-            isLoading: false,
-            //eventSource = (responseJson.shops),
-            dataSource: ds.cloneWithRows(responseJson.shops)
-          },
-          function() {
-            // In this block you can do something with new state.
-          }
-        );
-      })
-      .catch(error => {
-        console.error(error);
+//  const renderData = responseJson.shops.map((shops) => {
+//       //return shops.events.map(events =>{
+//      //    return  brand.subProducts.map(subProduct => {
+//            return `${shops.id}`
+//      //     }).join("\n")
+//      //})
+//   })
+    .then(response => response.json())
+    
+    .then(responseJson => {
+      let ds = new ListView.DataSource({
+        rowHasChanged: (r1, r2) => r1 !== r2
       });
-  }
+
+   
+
+  console.log(responseJson.shops[0].events)
+      
+      this.setState(
+        {
+          isLoading: false,
+          dataSource: ds.cloneWithRows(responseJson.shops[0].events),
+          
+        },
+
+        function() {
+          // In this block you can do something with new state.
+        }
+      );
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
+  
 
   ListViewItemSeparator = () => {
     return (
@@ -80,8 +96,10 @@ export default class ClubCatch extends React.Component {
         <View style={styles.MainContainer}>
         <ListView
           dataSource={this.state.dataSource}
+          
           renderSeparator={this.ListViewItemSeparator}
           renderRow={rowData => (
+            
             <View style={styles.row}>
               <Image
                 width={Dimensions.get("window").width}
@@ -91,7 +109,7 @@ export default class ClubCatch extends React.Component {
               />
 
               <View style={styles.bannerText}>
-                <Text> {rowData.badge_text}</Text>
+                <Text> {rowData.event_id}</Text>
 
                 <View style={styles.bannerext}>
                   <Text> {rowData.name}</Text>
