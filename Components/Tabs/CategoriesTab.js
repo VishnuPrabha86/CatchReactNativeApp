@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   ActivityIndicator,
   ListView,
   Text,
   View,
   Alert
 } from "react-native";
-import { Dimensions } from "react-native";
 import {Icon} from 'native-base';
+import styles from '../Style/Style';
 
 export default class CategoriesTab extends React.Component {
   constructor(props) {
@@ -89,17 +88,3 @@ export default class CategoriesTab extends React.Component {
       );
     }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  bannerText: {
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    padding: 15,
-  }
-})

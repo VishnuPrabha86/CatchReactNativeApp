@@ -61,14 +61,14 @@ class Account extends React.Component {
   render() {
     return (
       <View>
-        <Text>Hello _ Account</Text>
+        <Text>Hello _ sssssssssAccount</Text>
       </View>
     );
   }
 }
 
 const MyTabNavigator = NavigationComponent({
-  Home: { screen: Home },
+  Home: { screen: Homes },
   Wishlist: { screen: Wishlist },
   Categories: { screen: Categories },
   Cart: { screen: Cart },

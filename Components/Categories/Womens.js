@@ -5,8 +5,7 @@ import Image from 'react-native-scalable-image';
 import {Icon} from 'native-base';
 import styles from '../Style/Style';
 
-
-export default class ClubCatch extends React.Component {
+export default class Womens extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +19,7 @@ export default class ClubCatch extends React.Component {
   }
   componentDidMount() {
     return fetch(
-      "https://cotdapi.devcat.ch/v1/shops.json?&osName=React&fields=events&ids=69"
+      "https://cotdapi.devcat.ch/v1/shops.json?&osName=React&fields=events&ids=16"
     )
     .then(response => response.json())
     
@@ -52,7 +51,7 @@ export default class ClubCatch extends React.Component {
         style={{
           height: 0.5,
           width: "100%",
-          backgroundColor: "#999999",
+          backgroundColor: "#999999"
         }}
       />
     );

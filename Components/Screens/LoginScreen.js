@@ -1,6 +1,7 @@
 import React from 'react';
-import {StyleSheet, Text, View } from 'react-native';
+import {Text, View } from 'react-native';
 import {Icon} from 'native-base';
+import styles from '../Style/Style';
 
 export default class LoginScreen extends React.Component {
     static navigationOptions = {
@@ -30,17 +31,3 @@ export default class LoginScreen extends React.Component {
         )
     }
 }
-
-const styles = StyleSheet.create ({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-
-    },
-    linky: {
-        color: 'blue',
-        paddingTop: 10
-    }
-})

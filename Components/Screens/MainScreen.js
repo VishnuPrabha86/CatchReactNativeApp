@@ -7,7 +7,6 @@ import CategoriesTab from "../Tabs/CategoriesTab";
 import CartTab from "../Tabs/CartTab";
 import AccountTab from "../Tabs/AccountTab";
 import { SearchBar } from "react-native-elements";
-import {Icons} from 'native-base';
 
 export default class MainScreen extends React.Component {
   
@@ -15,8 +14,7 @@ export default class MainScreen extends React.Component {
     header: (
      <SafeAreaView style={{backgroundColor: '#0C84D8', borderBottomWidth: 0}} >
         <SearchBar 
-            //lightTheme
-            // icon={{ type: 'font-awesome', name: 'search' }}
+            lightTheme
             placeholder="Search..."
             platform="ios"
             containerStyle={{ backgroundColor: '#0C84D8', borderBottomWidth: 0 ,borderTopWidth: 0}}
@@ -66,11 +64,3 @@ const AppBottomTabNavigator = createBottomTabNavigator(
   }
 );
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});

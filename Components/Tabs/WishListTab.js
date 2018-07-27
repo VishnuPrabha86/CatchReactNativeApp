@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import {Icon} from 'native-base';
+import styles from '../Style/Style';
 
 export default class WishListTab extends React.Component {
   static navigationOptions = {
@@ -14,12 +15,3 @@ export default class WishListTab extends React.Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})

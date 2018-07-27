@@ -1,15 +1,11 @@
-import React, { Component } from 'react'
-import Image from 'react-native-scalable-image';
-import {
-  StyleSheet,
-  ActivityIndicator,
-  ListView,
-  Text,
-  View,
-  Alert
-} from "react-native";
+import React, { Component } from 'react';
+import {ActivityIndicator,ListView,Text,View,Alert} from "react-native";
 import { Dimensions } from "react-native";
-export default class MyComponent extends Component {
+import Image from 'react-native-scalable-image';
+import {Icon} from 'native-base';
+import styles from '../Style/Style';
+
+export default class New extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,7 +47,7 @@ export default class MyComponent extends Component {
         style={{
           height: 0.5,
           width: "100%",
-          backgroundColor: "#000"
+          backgroundColor: "#999999",
         }}
       />
     );
@@ -97,18 +93,3 @@ export default class MyComponent extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  MainContainer: {
-    // Setting up View inside content in Vertically center.
-    justifyContent: "center",
-    flex: 1,
-    margin: 0
-  },
-
-  rowViewContainer: {
-    fontSize: 20,
-    paddingRight: 0,
-    paddingTop: 10,
-    paddingBottom: 10
-  }
-});

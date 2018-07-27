@@ -1,5 +1,4 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
 import { createStackNavigator } from "react-navigation";
 import MainScreen from "./MainScreen";
 import LoginScreen from "./LoginScreen";
@@ -16,12 +15,3 @@ const AppStackNavigator = createStackNavigator({
   Login: { screen: LoginScreen }
 });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "row",
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});

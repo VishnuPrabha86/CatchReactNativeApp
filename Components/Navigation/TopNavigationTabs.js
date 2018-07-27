@@ -1,15 +1,25 @@
-import React from 'react'
-import { createMaterialTopTabNavigator,  } from 'react-navigation'
-import { View, Text } from 'react-native';
+import React, { Component } from 'react';
+import { createMaterialTopTabNavigator,  } from 'react-navigation';
+import { View } from 'react-native';
 import { Dimensions } from "react-native";
 import ClubCatch from '../Categories/ClubCatch';
-import MyComponent from '../Screens/HomeScroll';
+import Beauty from '../Categories/Beauty';
+import Entertainment from '../Categories/Entertainment';
+import Groceries from '../Categories/Groceries';
+import Home from '../Categories/Home';
+import KidsAndBaby from '../Categories/KidsAndbaby';
+import MarketplaceDeals from '../Categories/MarketplaceDeals';
+import Mens from '../Categories/Mens';
+import New from '../Categories/New';
+import Outlets from '../Categories/Outlets';
+import Pets from '../Categories/Pets';
+import SportsAndOutdoors from '../Categories/SportsAndOutdoors';
+import Tech from '../Categories/Tech';
+import ToysAndGames from '../Categories/ToysAndGames';
+import Womens from '../Categories/Womens';
 
 
 class TopNavigationTabs extends React.Component {
-
-
-    
     render(){
         return(
             <View style={{flex:1}}>
@@ -21,74 +31,24 @@ class TopNavigationTabs extends React.Component {
 }
 
 
-class MarketplaceDeals extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>Hello Club MarketplaceDeals</Text>
-            </View>
-        );
-
-    }
-}
-class Womens extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>Hello Club Womens</Text>
-            </View>
-        );
-
-    }
-}
-class Mens extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>Hello Club Mens</Text>
-            </View>
-        );
-
-    }
-}
-class Home extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>Hello Club Home</Text>
-            </View>
-        );
-
-    }
-}
-class Beauty extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>Hello Club Beauty</Text>
-            </View>
-        );
-
-    }
-}
 
 const TopNavigation = createMaterialTopTabNavigator ({
     
-    New: MyComponent,
+    New: New,
     ClubCatch: ClubCatch,
     MarketplaceDeals: MarketplaceDeals,
     Womens: Womens,
     Mens: Mens,
     Home: Home,
     Beauty: Beauty,
-    // SportsandOutdoors: SportsAndOutdoors,
-    // Groceries: Groceries,
-    // Tech: Tech,
-    // KidsAndBaby: KidsAndbaby,
-    // Entertainment: Entertainment,
-    // Pets: Pets,
-    // ToysAndGames: ToysAndGames,
-    // Outlets: Outlets,
+    SportsAndOutdoors: SportsAndOutdoors,
+    Groceries: Groceries,
+    Tech: Tech,
+    KidsAndBaby: KidsAndBaby,
+    Entertainment: Entertainment,
+    Pets: Pets,
+    ToysAndGames: ToysAndGames,
+    Outlets: Outlets,
 
 },{
     tabBarOptions: {
