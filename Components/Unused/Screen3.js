@@ -1,4 +1,4 @@
-import React from '../../../../Library/Caches/typescript/2.9/node_modules/@types/react'
+import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 
 export default class Screen3 extends React.Component {

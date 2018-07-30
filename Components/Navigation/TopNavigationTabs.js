@@ -10,7 +10,7 @@ import Home from '../Categories/Home';
 import KidsAndBaby from '../Categories/KidsAndbaby';
 import MarketplaceDeals from '../Categories/MarketplaceDeals';
 import Mens from '../Categories/Mens';
-import New from '../Categories/New';
+import NewNavigator from '../Categories/New';
 import Outlets from '../Categories/Outlets';
 import Pets from '../Categories/Pets';
 import SportsAndOutdoors from '../Categories/SportsAndOutdoors';
@@ -34,7 +34,7 @@ class TopNavigationTabs extends React.Component {
 
 const TopNavigation = createMaterialTopTabNavigator ({
     
-    New: New,
+    New: NewNavigator,
     ClubCatch: ClubCatch,
     MarketplaceDeals: MarketplaceDeals,
     Womens: Womens,

@@ -29,5 +29,21 @@ export default StyleSheet.create({
         paddingRight: 0,
         paddingTop: 10,
         paddingBottom: 10
+      },
+    
+      TextStyle:
+      {
+         fontSize: 23,
+         textAlign: 'center',
+         color: '#000',
+      },
+    
+      rowViewContainer: 
+      {
+        fontSize: 18,
+        paddingRight: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+     
       }
 });
